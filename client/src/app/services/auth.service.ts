@@ -10,7 +10,7 @@ import { User,AuthResponse,Credentials } from '../models/user.model';
   providedIn: 'root'
 })
 export class AuthService {
-  private baseUrl = `${environment.apiUrl}/api/user`;
+  private baseUrl = `${window.origin.replace("3000", "5000")}/api/user`;
 
   constructor(private http: HttpClient) {}
 

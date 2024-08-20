@@ -9,7 +9,7 @@ import { environment } from '../../environments/environment';
   providedIn: 'root'
 })
 export class PlannerService {
-  private baseUrl = `${environment.apiUrl}/api/planner`;
+  private baseUrl = `${window.origin.replace("3000", "5000")}/api/planner`;
 
   constructor(private http: HttpClient) {}
 

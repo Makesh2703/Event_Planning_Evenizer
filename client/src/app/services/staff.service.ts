@@ -9,7 +9,7 @@ import { User } from '../models/user.model';
   providedIn: 'root'
 })
 export class StaffService {
-  private baseUrl = `${environment.apiUrl}/api/staff`;
+  private baseUrl = `${window.origin.replace("3000", "5000")}/api/staff`;
 
   constructor(private http: HttpClient) { }
 

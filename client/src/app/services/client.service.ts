@@ -8,7 +8,7 @@ import { Task } from '../models/task.model';
   providedIn: 'root'
 })
 export class ClientService {
-  private baseUrl = `${environment.apiUrl}/api/client`;
+  private baseUrl = `${window.origin.replace("3000", "5000")}/api/client`;
 
   constructor(private http: HttpClient) { }
 
