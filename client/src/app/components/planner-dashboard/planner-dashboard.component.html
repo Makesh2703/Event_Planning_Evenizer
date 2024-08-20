@@ -1,0 +1,321 @@
+<html>
+
+<body style="background-color: whitesmoke;">
+
+  <!-- NavBar -->
+  <nav class="navbar" style="background-color: black;">
+    <img class="eventlogo" src="../../../assets/elogo2.png">
+    <h2 class="header" (click)="navigateTo('welcome')">Planner</h2>
+    <!-- <button class="navbarbut" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button> -->
+
+    <a class="nav-link1" (click)="navigateTo('manage-events')">Manage Events</a>
+    <a class="nav-link2" (click)="navigateTo('manage-tasks')">Manage Tasks</a>
+    <a class="nav-link3" (click)="navigateTo('eventslist')">Show Events</a>
+    <a class="nav-link4" (click)="navigateTo('taskslist')">Show Tasks</a>
+    <button class="navBtn" (click)="logout()">Logout</button>
+
+  </nav>
+
+  <!-- <h2 class="well">Welcome</h2> -->
+  <marquee class="wel" scrollamount="20" behavior="scroll" width="100%">Your Vision, Our Innovation</marquee>
+
+  <div *ngIf="showEvents || showTasks" class="popup">
+    <div *ngIf="showEvents" class="main1">
+
+      <!-- *ngIf="createevent" -->
+      <div *ngIf="createeevent" class="createcontainer">
+
+        <!-- <h3>Create Event</h3> -->
+        <div class="cardheader">
+          <h3 class="head">Create Event</h3>
+          <!-- <button (click)="View('createeevent')">View List</button> -->
+        </div>
+
+        <div class="cardbody">
+          <form (ngSubmit)="createEvent()">
+            <div class="formgroup" id="formgrp4">
+              <label class="lbl">Title:</label>
+              <input [(ngModel)]="newEvent.title" name="title" class="form-control" required>
+            </div>
+            <div class="formgroup" id="formgrp5">
+              <label class="lbl">Date:</label>
+              <input id="lbl" [(ngModel)]="newEvent.date" name="date" type="datetime-local" class="form-control"
+                required [min]="minDate">
+            </div>
+            <div class="formgroup" id="formgrp1">
+              <label class="lbl">Location:</label>
+              <input [(ngModel)]="newEvent.location" name="location" class="form-control" required>
+            </div>
+            <div class="formgroup" id="formgrp3">
+              <label class="lbl">Description:</label>
+              <input [(ngModel)]="newEvent.description" name="description" class="form-control" required>
+            </div>
+            <div class="formgroup" id="formgrp2">
+              <label class="lbl">Status:</label>
+              <!-- <input [(ngModel)]="newEvent.status" name="status" class="form-control" required> -->
+              <select [(ngModel)]="newEvent.status" name="status" id="Status" class="form-control" required>
+                <option value="" disabled selected>Select Status</option>
+                <option value="Initiated">Initiated</option>
+                <option value="In Progress">In Progress</option>
+                <option value="Completed">Completed</option>
+              </select>
+
+            </div>
+            <button class="create-button" type="=submit" id="createbtn">Create</button>
+            <!-- (click)="manageevent('eventlist')" -->
+            <!-- <button type="submit" class="btn btn-primary" id="createbtn">Create Event</button> -->
+          </form>
+          <button class="cancel-button" (click)="navigateTo('welcome')" id="cancelbtn">Cancel</button>
+
+
+        </div>
+      </div>
+
+
+      <!-- Edit Event -->
+      <div class="modal fade" id="updateEventModal" tabindex="-1" aria-labelledby="updateEventModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title taskhead" id="updateEventModalLabel">Update Event</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form id="updateEventForm" *ngIf="selectedEvent">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="mb-3">
+                      <label for="updateEventName" class="form-label">Event Name</label>
+                      <input type="text" class="form-control" id="updateEventName" [(ngModel)]="selectedEvent.title"
+                        name="title" required>
+                    </div>
+                    <div class="mb-3">
+                      <label for="updateEventDate" class="form-label">Date and Time</label>
+                      <input type="datetime-local" class="form-control" id="updateEventDate"
+                        [(ngModel)]="selectedEvent.date" name="date" required [min]="minDate">
+                    </div>
+                    <div class="mb-3">
+                      <label for="updateEventLocation" class="form-label">Location</label>
+                      <input type="text" class="form-control" id="updateEventLocation"
+                        [(ngModel)]="selectedEvent.location" name="location" required>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="mb-3">
+                      <label for="updateEventDescription" class="form-label">Description</label>
+                      <textarea class="form-control" id="updateEventDescription" rows="3"
+                        [(ngModel)]="selectedEvent.description" name="description" required></textarea>
+                    </div>
+                    <div class="mb-3">
+                      <label for="updateEventStatus" class="form-label">Status</label>
+                      <select class="form-control" id="updateEventStatus" [(ngModel)]="selectedEvent.status"
+                        name="status" required>
+                        <option value="Initiated">Initiated</option>
+                        <option value="In Progress">In Progress</option>
+                        <option value="Completed">Completed</option>
+                        <option value="Cancelled">Cancelled</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn" id="canceltask" data-bs-dismiss="modal">Cancel</button>
+              <button type="button" class="btn createtaskbtn" id="updateEventBtn"
+                (click)="selectedEvent ? updateEvent(selectedEvent, selectedEvent.id) : null"
+                data-bs-dismiss="modal">Update Event</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- *ngIf="eventlist"  -->
+
+
+      <div *ngIf="eventslist" class="card3">
+        <div class="headerevent">
+          <h3 class="headlist">Event List</h3>
+        </div>
+        <!-- <button (click)="View('eventslist')">Create New</button> -->
+        <input id="search" type="text" placeholder="Search By Title" [(ngModel)]="searchTitle" (input)="search() "
+          class="rounded border-0 bg-light w-25 p-2 search-input">
+        <div class="card-bodys">
+          <table class="tableevents" sgty>
+            <thead>
+              <tr>
+                <th>Title</th>
+                <th>Date
+                  <button (click)="toggleSortOrder()"> {{ sortOrder === 'asc' ? '⬇' : '⬆' }}
+                  </button>
+                </th>
+                <th>Location</th>
+                <th>Description</th>
+                <th>Status</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let event of paginatedList">
+                <td>{{ event.title }}</td>
+                <td>{{ event.date }}</td>
+                <td>{{ event.location }}</td>
+                <td>{{ event.description }}</td>
+                <td>{{ event.status }}</td>
+                <td>
+                  <button class="btn btn-warning" id="edit" data-bs-toggle="modal" data-bs-target="#updateEventModal"
+                    (click)="editEvent(event)">Edit</button>
+                  <button class="btn btn-danger" id="delete" (click)="deleteEvent(event.id)">Delete</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <nav aria-label="Page navigation">
+            <ul class="pagination justify-content-center">
+              <li class="page-item" [class.disabled]="currentPage === 1">
+                <a class="page-link" href="javascript:void(0)" (click)="goToPage(1)" aria-label="First">
+                  <span aria-hidden="true">««</span>
+                </a>
+              </li>
+              <li class="page-item" [class.disabled]="currentPage === 1">
+                <a class="page-link" href="javascript:void(0)" (click)="goToPage(currentPage - 1)"
+                  aria-label="Previous">
+                  <span aria-hidden="true">«</span>
+                </a>
+              </li>
+              <li class="page-item" *ngFor="let page of [].constructor(totalPages); let i = index"
+                [class.active]="i + 1 === currentPage">
+                <a class="page-link" href="javascript:void(0)" (click)="goToPage(i + 1)">{{i + 1}}</a>
+              </li>
+              <li class="page-item" [class.disabled]="currentPage === totalPages">
+                <a class="page-link" href="javascript:void(0)" (click)="goToPage(currentPage + 1)" aria-label="Next">
+                  <span aria-hidden="true">»</span>
+                </a>
+              </li>
+              <li class="page-item" [class.disabled]="currentPage === totalPages">
+                <a class="page-link" href="javascript:void(0)" (click)="goToPage(totalPages)" aria-label="Last">
+                  <span aria-hidden="true">»»</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+
+    <div *ngIf="showTasks" class="card3">
+
+      <div *ngIf="createtasksss" class="createtask">
+        <h3 class="taskhead">Create Task</h3>
+        <div class="card-bodys">
+          <form (ngSubmit)="createTask()">
+            <div class="form-group" id="des">
+              <label class="des">Description:</label>
+              <input id="inp" [(ngModel)]="newTask.description" name="description" class="form-control" required>
+            </div>
+            <div class="form-group" id="stat">
+              <label class="stat">Status:</label>
+              <!-- <input [(ngModel)]="newTask.status" name="status" class="form-control" required> -->
+              <select [(ngModel)]="newTask.status" name="status" id="inp" class="form-control" required>
+                <option value="" disabled selected>Select Status</option>
+                <option value="Initiated">Initiated</option>
+                <option value="In Progress">In Progress</option>
+                <option value="Completed">Completed</option>
+              </select>
+            </div>
+            <div class="form-group" id="staff">
+              <label class="staff">Assign Staff:</label>
+              <select [(ngModel)]="newTask.assignedStaff" name="role" id="inp" class="form-control" required>
+                <option value="" disabled selected>Select Staff to assign</option>
+
+                <option *ngFor="let staff of staffs" [ngValue]="staff">
+                  {{ staff.username }}
+                </option>
+              </select>
+            </div>
+            <button type="submit" class="createtaskbtn">Create</button>
+            <button class="cancel-button" (click)="navigateTo('welcome')" id="canceltask">Cancel</button>
+          </form>
+        </div>
+      </div>
+
+
+      <div *ngIf="taskslist" class="card3">
+        <div class="card-header">
+          <h3 class="taskheading">Task List</h3>
+        </div>
+        <div class="card-body">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>Description</th>
+                <th>Status</th>
+                <th>Assigned Staff Id</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let task of tasks">
+                <td>{{ task.description }}</td>
+                <td>{{ task.status }}</td>
+                <td>{{ task.id || 'Unassigned' }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+
+      </div>
+
+    </div>
+
+
+
+    <div class="footer">
+      <img class="eventlogofooter" src="../../../assets/elogo2.png">
+      <div class="footerheading">
+        <h1 class="footerheading1">We are available</h1>
+        <h1 class="footerheading2">for a new events.</h1>
+        <p class="ptag1">Have any events in mind?</p>
+        <p class="ptag2">Let's start today</p>
+        <hr>
+      </div>
+      <div class="contact">
+        <h3 class="contactheading">Contact Info</h3>
+        <p class="address">103, sector 1 Koparkarane,<br>
+          Navi Mumbai, Maharastra-400001<br>
+          www.evenizer.com<br>
+          +91 9898787654<br>
+        </p>
+      </div>
+      <div class="working">
+        <h3 class="workingheading">Working Hours</h3>
+        <p class="time">Mon - Sat<br>
+          09.00 am to 08.00 pm<br>
+          Vacation<br>
+          All Sunday is our vacation<br>
+        </p>
+      </div>
+
+      <div class="follow">
+        <h3 class="followus">Follow us</h3>
+        <p class="followon">https://www.facebook.com/Evenizer<br>
+          https://www.instagram.com/Evenizer<br>
+          https://www.twitter.com/Evenizer
+        </p>
+      </div>
+      <div class="copyrights">
+        <p>©2024. All Rights Reserved</p>
+      </div>
+
+    </div>
+
+    <!-- <h2>Welcome</h2> -->
+  </div>
+</body>
+
+</html>

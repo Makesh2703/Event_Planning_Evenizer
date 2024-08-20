@@ -1,0 +1,773 @@
+.eventlogo{
+  width: 72px;
+  height: 59px;
+  position: relative;
+  margin-top:-16px;
+  margin-left: 1%;
+  padding-left: 1px;
+}
+.nav-link1{
+  background-color: black;
+  color: white;
+  text-decoration: none;
+  margin-left: 5%;
+  margin-top: -18px;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.nav-link2{
+  background-color: black;
+  color: white;
+  text-decoration: none;
+  margin-left: 5%;
+  margin-top: -18px;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.nav-link3{
+  background-color: black;
+  color: white;
+  text-decoration: none;
+  margin-left: 5%;
+  margin-top: -18px;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.nav-link4{
+  background-color: black;
+  color: white;
+  text-decoration: none;
+  margin-left: 5%;
+  margin-top: -18px;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.header{
+  font-size: 26px;
+  font-weight: 900;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  margin-left:2%;
+  margin-top: -8px;
+  text-decoration: none;
+  font-family:'Times New Roman', Times, serif;  
+  font-optical-sizing: auto;
+}
+.navBtn {
+  width: 80px;
+  height: 35px;
+  background-color: #ffffff;
+  color: #000000;
+  border: none;
+  border-radius: 2px;
+  margin-left: auto; 
+  margin-right: 1rem;
+  font-size: 13px;
+  margin-top: -20px;
+  padding-top: -1px;
+  text-decoration: none;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+ 
+}
+.wel{
+  color: black;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 25px;
+  text-align: center;
+  margin-top: 1%;
+  flex: 1;
+}
+.well{
+  color: black;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 20px;
+  text-align: center;
+  margin-top: 5%;
+  flex: 1;
+}
+.navbar {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 10px; 
+
+  margin-top: 0%;
+  grid-template-columns: 1fr 1fr;
+  text-decoration: none;
+}
+
+.form-control{
+  /* background-image: linear-gradient(to right, #29323c, #485563, #2b5876, #4e4376); */
+  /* box-shadow: 0 4px 15px 0 rgba(45, 54, 65, 0.75); */
+  background-color:rgba(165, 164, 164, 0.3);
+}
+
+.popup{
+  width:80%;
+  margin-left: 10%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border-radius: 50px;
+}
+.main1{
+  flex: 1;
+  overflow-y: auto;
+}
+
+.cardheader{
+  /* background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%); */
+  margin-top: -1%;
+  
+}
+
+.head{
+  font-size: 30px;
+  text-align: center;
+  font-weight: 800;
+  margin-top: 1%;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.cardbody{
+  width: 40%;
+  margin-left: 12%;
+  margin-top: 1%;
+}
+.form-group{
+  
+}
+
+#formgrp1{
+  margin-left: 100.1%;
+  margin-top: -173px;
+  width:99.5%;
+  position: relative;
+}
+#formgrp4{
+
+  margin-top: -3%;
+  width:99.5%;
+  position: relative;
+  margin-left: 1px;
+}
+#formgrp2{
+  margin-left: 99.9%;
+  margin-top: -175px;
+  width:99.5%;
+  position:relative;
+}
+#formgrp5{
+
+  margin-top: -3%;
+  width:99.5%;
+  position:relative;
+}
+
+#formgrp3{
+  margin-top: 86px;
+  width: 200%;
+  position: relative;
+}
+/* #cancelbtn #cretaebtn{
+  padding: 10px 20px; 
+  font-size: 16px; 
+  cursor: pointer;
+} */
+#createbtn{
+  margin-top: 18%;
+  height: 33px;
+  width: 100%;
+  color: white;
+  background-color: black;
+  border-color: black;
+  position:static;
+}
+.buttns{
+  width: 100%;
+  grid-template-columns: 1fr 1fr;
+  /* display: flex; */
+  justify-content: space-between; 
+  align-items: center; 
+
+  /* gap: 10px;  */
+}
+#cancelbtn{
+  margin-top:12.6%;
+  color: white;
+  width: 100%;
+  height: 33px; 
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  margin-left: 100%;
+  background-color: black;
+  border-color: black;
+  position: relative;
+}
+.formgroup {
+  margin-bottom: 1rem;
+  padding: 0.5rem; 
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 0.25rem; 
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); 
+}
+#createbtn {
+  color: #fff;
+  cursor: pointer;
+  text-align:center;
+  border: none;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  background-size: 300% 100%;
+  moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+.lbl{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 15px;
+}
+#Status{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 15px;
+}
+#lbl{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 15px;
+}
+
+#createbtn:hover {
+  background-position: 100% 0;
+  moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+#createbtn {
+  /* background-color: black; */
+  /* background-image: linear-gradient(to right, #29323c, #485563, #2b5876, #4e4376);
+  box-shadow: 0 4px 15px 0 rgba(45, 54, 65, 0.75); */
+  /* submit */
+  background-image: linear-gradient(to right, #29323c, #485563, #2b5876, #4e4376);
+  box-shadow: 0 4px 15px 0 rgba(45, 54, 65, 0.75);
+  /* delete */
+    /* background-image: linear-gradient(to right, #eb3941, #f15e64, #e14e53, #e2373f);  box-shadow: 0 5px 15px rgba(242, 97, 103, .4); */
+}
+#cancelbtn {
+  /* color: #fff; */
+  cursor: pointer;
+  text-align:center;
+  border: none;
+  background-size: 300% 100%;
+  moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+#cancelbtn:hover {
+  background-position: 100% 0;
+  moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+#cancelbtn {
+  /* background-color: black; */
+  /* background-image: linear-gradient(to right, #29323c, #485563, #2b5876, #4e4376);
+  box-shadow: 0 4px 15px 0 rgba(45, 54, 65, 0.75); */
+  /* submit */
+  /* background-image: linear-gradient(to right, #0ba360, #3cba92, #30dd8a, #2bb673);
+    box-shadow: 0 4px 15px 0 rgba(23, 168, 108, 0.75); */
+  /* delete */
+    background-image: linear-gradient(to right, #9d6e0a, #edc151, #b78822, #cd9c3b);  box-shadow: 0 5px 15px rgba(242, 97, 103, .4);
+}
+.main2{
+  /* margin-top: 1%; */
+}
+#createtaskheader{
+  /* background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%); */
+  /* margin-top: 3%; */
+  background-color: rgba(0, 0, 0, 0);
+  
+}
+.createtask{
+  height: 300px;
+  /* background-color:white; */
+  width:50%;
+  margin-left: 26%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border-radius: 50px;
+  margin-top: -1%;
+}
+.card-bodys{
+  margin-top: -1%;
+}
+.taskhead{
+  font-size: 30px;
+  text-align: center;
+  font-weight: 800;
+  margin-top: 1%;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  background-color: rgba(0, 0, 0, 0);
+}
+.form-group{
+  /* background-color: white; */
+  /* width: 90%; */
+  margin-left: 5%;
+  
+}
+#des{
+  background-color: white;
+  border-radius: 4px;
+  padding-top: 1%;
+  height: 70px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 15px;
+  padding-left: 1%;
+}
+#stat{
+  background-color: white;
+  border-radius: 4px;
+  margin-top: 1%;
+  height: 70px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 15px;
+  padding-left: 1%;
+}
+#staff{
+  background-color: white;
+  border-radius: 4px;
+  margin-top: 1%;
+  height: 70px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 15px;
+  padding-left: 1%;
+}
+#inp{
+  width: 98%;
+  margin-left: 0.5%;
+}
+.createtaskbtn{
+  height: 33px;
+  width: 47%;
+  margin-left: 5%;
+  margin-top: 1%;
+  color: white;
+  /* position:static; */
+  cursor: pointer;
+  text-align:center;
+  border: none;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  background-size: 300% 100%;
+  moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+  background-image: linear-gradient(to right, #29323c, #485563, #2b5876, #4e4376);
+  box-shadow: 0 4px 15px 0 rgba(45, 54, 65, 0.75);
+}
+.createtaskbtn:hover {
+  background-position: 100% 0;
+  moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+#canceltask{
+  width: 47%;
+  margin-left: 53%;
+  margin-top: 10.1%;
+  color: white;
+  height: 33px;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  position: relative;
+  cursor: pointer;
+  text-align:center;
+  border: none;
+  background-size: 300% 100%;
+  moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+  background-image: linear-gradient(to right, #9d6e0a, #edc151, #b78822, #cd9c3b);  box-shadow: 0 5px 15px rgba(242, 97, 103, .4);
+}
+#canceltask:hover {
+  background-position: 100% 0;
+  moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+.headlist{
+  font-size: 30px;
+  text-align: center;
+  font-weight: 800;
+  margin-top: 1%;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+::placeholder{
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  text-align: center;
+}
+#search{
+  margin-left: 0;
+  background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+}
+.headerevent{
+  /* background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%); */
+}
+.tableevents{
+  color: black;
+  
+}
+thead{
+  color: black;
+}
+table{
+  width:100%;
+  margin-top: 2%;
+  table-layout: fixed;
+  
+}
+.tbl-content{
+  height:300px;
+  overflow-x:auto;
+  margin-top: 0px;
+  border: 1px solid rgba(255,255,255,0.3);
+}
+th{
+  /* padding: 20px 15px; */
+  text-align: left;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 500;
+  font-size: 17px;
+  /* background-image: linear-gradient(to right, #9d6e0a, #edc151, #b78822, #cd9c3b); */
+  background-color:#cd9c3b ;
+  
+  /* color: #fff; */
+  /* text-transform: uppercase; */
+}
+td{
+  padding: 15px;
+  text-align: left;
+  vertical-align:middle;
+  font-weight: 300;
+  font-size: 14px;
+  /* color: #fff; */
+  border-bottom: solid 1px rgba(255,255,255,0.1);
+}
+
+/* .pagination{
+  font-size: 12px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: black;
+  text-decoration: none;
+  width: 150px;
+  margin-left: 81%;
+  height: 35px;
+
+  
+}
+.page1{
+  font-size: 15px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background-image: linear-gradient(to right, #9d6e0a, #edc151, #b78822, #cd9c3b);
+  color: black;
+  text-decoration: none;
+  text-align: center;
+  margin-left: 20%;
+  width: 60px;
+  height: 26px;
+  
+}
+a{
+  text-decoration: none;
+  color: black;
+}
+.page2{
+  font-size: 15px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background-image: linear-gradient(to right, #9d6e0a, #edc151, #b78822, #cd9c3b);
+  color: black;
+  text-decoration: none;
+  text-align: center;
+  margin-left: 20%;
+
+  width: 50px;
+  height: 26px;
+
+} */
+.pagination {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  padding: 0;
+}
+
+.pagination li {
+  margin: 0 5px;
+}
+
+.pagination a {
+  display: block;
+  padding: 8px 16px;
+  text-decoration: none;
+  color: #007bff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.pagination a:hover {
+  background-color: #ddd;
+}
+
+.pagination .disabled a {
+  color: #ccc;
+  pointer-events: none;
+}
+
+.pagination .active a {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+.taskheading{
+  font-size: 30px;
+  text-align: center;
+  font-weight: 800;
+  margin-top: 1%;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto; 
+  /* margin-bottom: 105px; */
+}
+.footer{
+  width:100%;
+  height: 105px;
+  background-color: black;
+  grid-template-columns: 1fr 1fr;
+  position:fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+}
+
+html{
+  background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+  height: 100%;
+}
+
+/* .footer {
+  width: 100%;
+  height: 105px;
+  background-color: black;
+  color: white;
+  position: relative;
+  bottom: -10%;
+} */
+.eventlogofooter{
+  width: 102px;
+  height: 89px;
+  position: relative;
+  margin-top:1px;
+  margin-left:6%;
+  padding-left: 1px;
+}
+.footerheading1{
+  color: rgba(246, 221, 175, 0.7);
+  margin-top: -105px;
+  margin-left: 15%;
+  font-size: 20px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.footerheading2{
+  color: rgba(248, 228, 192, 0.7);
+  margin-top: -48px;
+  margin-left: 15%;
+  font-size: 16px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.footerheading{
+  margin-top: -4%;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  margin-left:6%;
+}
+.ptag1{
+  color: rgba(255, 249, 239, 0.7);
+  margin-top: -25px;
+  margin-left: 15%;
+  font-size: 8px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.ptag2{
+  color: rgba(255, 249, 239, 0.7);
+  margin-top: -2px;
+  margin-left: 15%;
+  font-size: 8px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+hr{
+  color: rgb(255, 255, 255);
+  width: 100%;
+  margin-top:-5px;
+  border: 1px solid;
+  margin-left:-3%;
+}
+.contactheading{
+  color: rgba(252, 244, 228, 0.7);
+  margin-top: -106px;
+  margin-left: 40%;
+  font-size: 16px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.address{
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 9px;
+  font-family: 'Times New Roman', Times, serif;
+  margin-left: 40%;
+  margin-top: -16px;
+  line-height: 12px
+}
+.workingheading{
+  color: rgba(252, 244, 228, 0.7);
+  margin-top: -90px;
+  margin-left: 60%;
+  font-size: 16px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+.time{
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 9px;
+  font-family: 'Times New Roman', Times, serif;
+  margin-left: 762px;
+  margin-top: -16px;
+  line-height: 12px
+}
+
+.followus{
+  color: rgba(252, 244, 228, 0.7);
+  margin-top: -90px;
+  margin-left: 80%;
+  font-size: 16px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+.followon{
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 9px;
+  font-family: 'Times New Roman', Times, serif;
+  margin-left: 972px;
+  margin-top: -16px;
+  line-height: 16px
+}
+.copyrights{    
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 10px;
+  font-family: 'Times New Roman', Times, serif;
+  margin-left: 572px;
+  margin-top: -1px;
+  line-height: 16px
+}
+
+.create-button {
+  position: relative;
+  bottom: 85px; /* Slightly more than footer height */
+  z-index: 1000;
+  /* Add any other styles for your button */
+}
+.cancel-button {
+  position: relative;
+  bottom: 85px; /* Slightly more than footer height */
+  z-index: 1000;
+  /* Add any other styles for your button */
+}
+/* .main-content {
+  min-height: calc(100vh - 105px); 
+  padding-bottom: 20px; 
+} */
+
+
+.tableevents{
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* -------------------------------------Tables--------------------------------------------------------- */
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300,700);
+body{
+  background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+  height: 100%;
+}
+section{
+  margin: 50px;
+}
+#edit{
+  background-image: linear-gradient(to right, #29323c, #485563, #2b5876, #4e4376);
+  box-shadow: 0 4px 15px 0 rgba(45, 54, 65, 0.75);
+  color: white;
+}
+#delete{
+  background-image: linear-gradient(to right, #29323c, #485563, #2b5876, #4e4376);
+  box-shadow: 0 4px 15px 0 rgba(45, 54, 65, 0.75);
+  color: white;
+}
+
+
+/* follow me template */
+.made-with-love {
+  margin-top: 40px;
+  padding: 10px;
+  clear: left;
+  text-align: center;
+  font-size: 10px;
+  font-family: arial;
+  color: #fff;
+}
+.made-with-love i {
+  font-style: normal;
+  color: #F50057;
+  font-size: 14px;
+  position: relative;
+  top: 2px;
+}
+.made-with-love a {
+  color: #fff;
+  text-decoration: none;
+}
+.made-with-love a:hover {
+  text-decoration: underline;
+}
+
+
+/* for custom scrollbar for webkit browser*/
+
+::-webkit-scrollbar {
+    width: 6px;
+} 
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+} 
+::-webkit-scrollbar-thumb {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+}
+

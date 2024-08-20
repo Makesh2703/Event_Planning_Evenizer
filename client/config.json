@@ -1,0 +1,64 @@
+{
+    "environment": [
+      {
+        "base": "custom",
+        "prebuild-location": "./prebuild.sh",
+        "test": {
+          "location": ".",
+          "command": "rm -rf ./output-frontend.xml && npm run test",
+          "xml_output_file": "./output-frontend.xml",
+          "total_testcases": 18,
+          "test_file_or_folder": "src/tests"
+        }
+      }
+    ],
+    "tasks": [
+      {
+        "label": "Run App",
+        "command": "npm run start",
+        "type": "shell"
+        
+      },
+      {
+        "label": "Submit App",
+        "command": "./resolv.sh",
+        "type": "shell"
+    }
+    ],
+    "solutions": {
+      "app.component.ts": "./src/app/app.component.ts",
+      "app.component.html": "./src/app/app.component.html",
+      "app.component.css": "./src/app/app.component.css"
+
+
+    },
+    "submission": "./src/app",
+    "testcases": {
+
+    },
+    "wecp-projects-extention-tabs": [
+      {
+        "name": "Start app",
+        "type": "task",
+        "props": {
+          "name": "Run App"
+        }
+      },
+      {
+        "name": "Open browser preview",
+        "type": "simple-browser",
+        "props": {
+          "port": "3000",
+          "relativeUrl": "/"
+        }
+      },
+      {
+        "name": "Test & Submit app",
+        "type": "task",
+        "props": {
+          "name": "Submit App"
+        }
+      }
+    ]
+  }
+  

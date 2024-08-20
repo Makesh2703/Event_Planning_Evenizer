@@ -1,0 +1,17 @@
+{
+  "name": "event-management-system",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "merge": "jrm results.xml target/surefire-reports/*.xml",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.3.3",
+    "junit-report-merger": "^6.0.2",
+    "sweetalert2": "^11.12.4"
+  }
+}
